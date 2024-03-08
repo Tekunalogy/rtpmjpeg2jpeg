@@ -55,8 +55,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	// Read RTP packets forever and send them to the WebRTC Client
+	
 	inboundRTPPacket := make([]byte, 2048) // UDP MTU
 	for {
 		n, _, err := listener.ReadFrom(inboundRTPPacket)
